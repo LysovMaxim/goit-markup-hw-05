@@ -344,7 +344,6 @@ body{
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    display: block;
     display: flex;
     justify-content: center;
     align-items: center;    
@@ -357,6 +356,12 @@ body{
 .networks-player-element:hover,
 .networks-player-element:focus{
     background-color: #2196F3;
+}
+
+.networks-player-element:hover .social-networks{
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .networks-player-element:hover .social-networks{
@@ -394,6 +399,10 @@ body{
 }
 
 .clients-link{
+    transition-property: border;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
     width: 170px;
     height: 92px;
     display: block;
@@ -413,6 +422,12 @@ body{
 
 .logo{
     fill: #AFB1B8;
+}
+
+.clients-link:hover .logo{
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-link:hover .logo{
@@ -500,6 +515,10 @@ body{
 }
 
 .footer-social{
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
     width: 44px;
     height: 44px;
     display: flex;
