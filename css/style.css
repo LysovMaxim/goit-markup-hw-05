@@ -29,10 +29,12 @@ img{
 /* ----------------------BODY---------------------------- */
 
 .header{
+    position: relative;
     background-color: var(--second-color);
     padding-top: 24px;
     padding-bottom: 25px;
     border-bottom: 1px solid #ECECEC;
+   
 }
 
 .container-nav-link{
@@ -60,10 +62,14 @@ body{
 }
 
 .navigation-link{
+
+
     margin-right: auto;
 }
 
-.nav-link{
+.nav-link{  
+
+
     gap: 50px;
     list-style:var(--point) ;
     display: flex;
@@ -78,14 +84,29 @@ body{
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
-    letter-spacing: 0.02em
-    
+    letter-spacing: 0.02em 
 }
 
 .link:hover,
 .link:focus {
     color: #2196F3;
 }
+
+
+
+.link-item::after{
+    content: " ";
+
+    position: absolute;
+    top: 77px;
+
+    display: block;
+    width: 48px;
+    height: 4px;
+    background-color: #2196F3;
+    border-radius: 2px;
+}
+
 /* --------------------tel/mail--------------------------------- */
 .link-contact{
     list-style:var(--point);
