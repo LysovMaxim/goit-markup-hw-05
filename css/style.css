@@ -287,6 +287,29 @@ body{
     gap: 30px;
 }
 
+.lessons{
+    position: relative;
+}
+
+.lessons-list{
+    position: absolute;
+    bottom: 0px ;
+
+    width: 370px;
+    height: 70px;
+    background-color:rgba(47, 48, 58, 0.8);
+}
+
+.lessons-item{
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding-top: 27px;
+}
+
 .work-out-team{}
 
 .work-team{
