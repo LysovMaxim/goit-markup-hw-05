@@ -94,8 +94,6 @@ body{
     color: #2196F3;
 }
 
-
-
 .link-item::after{
     content: " ";
 
@@ -130,7 +128,6 @@ body{
 
 .link-portfolio{
     color: #2196F3;}
-
 /* --------------------tel/mail--------------------------------- */
 .link-contact{
     list-style:var(--point);
@@ -244,8 +241,7 @@ body{
     border-radius: 4px;
     border: none;
     color: #FFFFFF;
-    background: #2196F3;
-    
+    background: #2196F3;  
 }
 /* ----------------------------BENEFITS--------------------------- */
 .benefits{ 
@@ -439,9 +435,6 @@ body{
 .networks-player-element:focus .social-networks{
     fill: #ffffff;
 }
-
-
-
 /* ------------------------clients-------------------------- */
 .clients{
     padding-top: 94px;
@@ -659,21 +652,25 @@ body{
     gap: 30px;
 }
 
-.photo-items{
-    transition-property: box-shadow;
+.photo {
+    text-decoration: var(--link-decoration);
+    display: block;
+}
+
+.photo{
+    transition-property:box-shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.photo-items:hover,
-.photo-items:focus{
+.photo:hover,
+.photo:focus{
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .text-photo{
     position: relative;
     overflow: hidden;
-
 }
 
 .text-photo-item{
@@ -692,14 +689,20 @@ body{
     color: #FFFFFF;
 }
 
-.photo-items:hover .text-photo-item{
+
+.photo:hover .text-photo-item{
     transform: translateY(0%);
     transition-property: transform;
     transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);  
 }
 
-
+.photo:focus .text-photo-item{
+    transform: translateY(0%);
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 .informetion{
     background-color: #FFFFFF;
@@ -709,10 +712,6 @@ body{
     padding-left: 24px;
     padding-top: 20px;
     padding-bottom: 20px;
-}
- 
-.photo{
-    text-decoration:var(--link-decoration);
 }
 
 .portfolio-items{
@@ -725,9 +724,60 @@ body{
 
 .portfolio-item{
     margin-top: 4px;
-
     font-size: 16px;
     line-height: 1.87;
     letter-spacing: 0.03em;
      color: var(--color-item-tel-mail);
+}
+
+.backdrop{
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    transition-property: opacity visibility;
+    transition-duration: 250ms;
+    transition-timing-function: linear;
+
+}
+
+.modal{
+    position: absolute;
+
+    width: 528px;
+    min-height: 581px;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: linear;
+}
+
+.backdrop.is-hidden .modal{
+    transform: translate(-50%, -50%) scale(0); 
+}
+
+.modal-btn{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    width: 30px;
+    height: 30px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.is-hidden{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 }
