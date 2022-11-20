@@ -241,7 +241,9 @@ body{
     border-radius: 4px;
     border: none;
     color: #FFFFFF;
-    background: #2196F3;  
+    background: #2196F3;
+    
+    cursor: pointer;
 }
 /* ----------------------------BENEFITS--------------------------- */
 .benefits{ 
@@ -417,6 +419,12 @@ body{
     fill:#AFB1B8;
 }
 
+.social-networks{
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .networks-player-element:hover,
 .networks-player-element:focus{
     background-color: #2196F3;
@@ -483,12 +491,6 @@ body{
 
 .logo{
     fill: #AFB1B8;
-}
-
-.clients-link:hover .logo{
-    transition-property: fill;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-link:hover .logo{
@@ -675,7 +677,12 @@ body{
 
 .text-photo-item{
     position: absolute;
+
     transform: translateY(100%);
+    transition-property: transform ;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
     top: 0px;
     height: 100%;
     padding-top: 64px;
@@ -741,7 +748,7 @@ body{
     transition-timing-function: linear;
 
 }
-
+/* ---------------------------MODAL_---------------------------------- */
 .modal{
     position: absolute;
 
@@ -774,10 +781,15 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+
+    cursor: pointer;
 }
 
 .is-hidden{
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+}
+.modal-btn:hover .modal-icon{
+    fill: #2196F3;
 }
