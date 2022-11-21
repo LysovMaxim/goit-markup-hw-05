@@ -245,6 +245,11 @@ body{
     
     cursor: pointer;
 }
+
+.btn:hover,
+.btn:focus{
+    background-color: #1976d2;
+}
 /* ----------------------------BENEFITS--------------------------- */
 .benefits{ 
     background-color:var(--second-color);
